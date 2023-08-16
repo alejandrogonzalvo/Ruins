@@ -1,7 +1,10 @@
 res://scenes/State.tscn
 res://scenes/StateMachine.tscn
-res://scenes/Entity.tscn
 res://scenes/prefabs/Platform.tscn
 res://scenes/prefabs/Player.tscn
 res://scenes/PlatformTest.tscn
+res://scenes/Test.tscn
 res://scenes/prefabs/Broken.gd
+res://scenes/PlatformTest.gd
+res://scripts/states/platform/Fixed.gd
+res://scenes/prefabs/Platform.gd
