@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bupsd7sxaoxcp"]
+[gd_scene load_steps=5 format=3 uid="uid://dl05lwpx2vcwy"]
 
 [ext_resource type="Script" path="res://scripts/StateMachine.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://muad1aaskn3l" path="res://assets/icon.png" id="2_ilg46"]

@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://5tcjju0i4xrq"]
+[gd_scene load_steps=8 format=3 uid="uid://5tcjju0i4xrq"]
 
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_60tjd"]
 [ext_resource type="Script" path="res://scripts/StateMachine.gd" id="2_l0mx4"]
 [ext_resource type="Script" path="res://scripts/states/player/Idle.gd" id="3_mp2ie"]
 [ext_resource type="Script" path="res://scripts/states/player/Walking.gd" id="4_r286j"]
+[ext_resource type="Script" path="res://scripts/states/player/Jumping.gd" id="5_b5s0x"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5ca6l"]
 
@@ -10,6 +12,10 @@
 size = Vector2(5, 10)
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_60tjd")
+walking_speed = 100.0
+jump_force = 100.0
+jump_time = 100.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(5, 10)
@@ -25,7 +31,10 @@ player = NodePath("../..")
 
 [node name="Walking" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("4_r286j")
-speed = 1000.0
+player = NodePath("../..")
+
+[node name="Jumping" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("5_b5s0x")
 player = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
