@@ -1,3 +1,7 @@
-res://scripts/states/player/Idle.gd
+res://scenes/State.tscn
+res://scenes/StateMachine.tscn
+res://scenes/Entity.tscn
+res://scenes/prefabs/Platform.tscn
 res://scenes/prefabs/Player.tscn
-res://scenes/Test.tscn
+res://scenes/PlatformTest.tscn
+res://scenes/prefabs/Broken.gd

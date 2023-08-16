@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1p0mc4fkxekh"]
+
+[ext_resource type="PackedScene" uid="uid://dad16cc15doc3" path="res://scenes/prefabs/Platform.tscn" id="1_cgnrv"]
+[ext_resource type="Texture2D" uid="uid://muad1aaskn3l" path="res://assets/icon.png" id="2_k5qo2"]
+
+[node name="PlatformTest" type="Node2D"]
+
+[node name="Platform" parent="." instance=ExtResource("1_cgnrv")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-174, -120)
+texture = ExtResource("2_k5qo2")

@@ -1,10 +1,12 @@
-Camera2D
 Sprite2D
-Idle
-StateMachine
-Node2D
+Camera2D
 State
-AnimationPlayer
+Timer
 CollisionShape2D
+Area2D
 CharacterBody2D
+StateMachine
+Idle
+Node2D
+AnimationPlayer
 AnimationTree

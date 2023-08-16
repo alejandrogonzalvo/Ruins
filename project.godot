@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Ruins"
-run/main_scene="res://scenes/Test.tscn"
+run/main_scene="res://scenes/PlatformTest.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://assets/icon.png"
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Platformss"
 
 [rendering]
 
