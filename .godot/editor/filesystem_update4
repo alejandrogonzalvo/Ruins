@@ -8,3 +8,4 @@ res://scenes/Idle.tscn
 res://scripts/Idle.gd
 res://scripts/Player.gd
 res://Entity.tscn
+res://Entity.gd
