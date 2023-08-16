@@ -8,3 +8,6 @@ res://scenes/prefabs/Broken.gd
 res://scenes/PlatformTest.gd
 res://scripts/states/platform/Fixed.gd
 res://scenes/prefabs/Platform.gd
+res://assets/Tileset ruins/ruinsTilemap.tscn
+res://scenes/Level0.tscn
+res://scenes/Level0.gd
