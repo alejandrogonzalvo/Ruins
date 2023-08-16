@@ -1,0 +1,17 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1692180352
+::res://assets/::1692177667
+default_env.tres::Environment::-1::1692177664::0::1::::<><>::
+icon.png::CompressedTexture2D::883560401750865639::1692172487::1692177667::1::::<><>::
+::res://scenes/::1692180352
+Idle.tscn::PackedScene::7573167492178064264::1692180330::0::1::::<><>::
+Player.gd::GDScript::-1::1692180251::0::1::::Player<>StateMachine<>::
+Player.tscn::PackedScene::9079296702060416793::1692180354::0::1::::<><>::res://scenes/Player.gd
+State.tscn::PackedScene::5503263401261679810::1692180175::0::1::::<><>::res://scripts/State.gd
+StateMachine.tscn::PackedScene::7990775323421047033::1692180068::0::1::::<><>::res://scripts/StateMachine.gd<>uid://muad1aaskn3l::::res://assets/icon.png
+Transition.tscn::PackedScene::-1::1692177664::0::1::::<><>::res://scripts/Transition.gd
+::res://scripts/::1692180352
+Idle.gd::GDScript::-1::1692180347::0::1::::<>State<>::
+State.gd::GDScript::-1::1692180161::0::1::::State<>Node2D<>::
+StateMachine.gd::GDScript::-1::1692180068::0::1::::StateMachine<>Node2D<>::
+Transition.gd::GDScript::-1::1692177664::0::1::::Transition<>Node2D<>::

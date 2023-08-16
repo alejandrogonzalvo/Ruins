@@ -6,33 +6,12 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[ {
-"base": "Node2D",
-"class": "State",
-"language": "GDScript",
-"path": "res://scripts/State.gd"
-}, {
-"base": "Node2D",
-"class": "StateMachine",
-"language": "GDScript",
-"path": "res://scripts/StateMachine.gd"
-}, {
-"base": "Node2D",
-"class": "Transition",
-"language": "GDScript",
-"path": "res://scripts/Transition.gd"
-} ]
-_global_script_class_icons={
-"State": "",
-"StateMachine": "",
-"Transition": ""
-}
+config_version=5
 
 [application]
 
 config/name="Ruins"
+config/features=PackedStringArray("4.1")
 config/icon="res://assets/icon.png"
 
 [rendering]
