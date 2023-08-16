@@ -12,6 +12,5 @@ func enter(_from: State = null):
 func exit(_to: State = null):
 	pass
 
-
-func _on_hitbox_area_entered(area):
+func _on_hitbox_body_entered(body):
 	transition.emit(self, "breaking")

@@ -38,6 +38,11 @@ jump={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Platformss"
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Platformss"
+
 [rendering]
 
 environment/default_environment="res://assets/default_env.tres"

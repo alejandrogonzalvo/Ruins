@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://dad16cc15doc3"]
+[gd_scene load_steps=9 format=3 uid="uid://dad16cc15doc3"]
 
 [ext_resource type="Texture2D" uid="uid://muad1aaskn3l" path="res://assets/icon.png" id="1_78h2l"]
+[ext_resource type="Script" path="res://scenes/prefabs/Platform.gd" id="1_fvd0l"]
 [ext_resource type="Script" path="res://scripts/StateMachine.gd" id="1_sbqlh"]
 [ext_resource type="Script" path="res://scripts/states/platform/Fixed.gd" id="2_cfkvm"]
 [ext_resource type="Script" path="res://scenes/prefabs/Breaking.gd" id="4_rvgw1"]
@@ -13,6 +14,8 @@ size = Vector2(284, 7)
 size = Vector2(276, 20)
 
 [node name="Platform" type="CharacterBody2D" groups=["Platforms"]]
+collision_layer = 2
+script = ExtResource("1_fvd0l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(105.5, 20)
@@ -21,7 +24,7 @@ texture = ExtResource("1_78h2l")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("1_sbqlh")
-initial_state = NodePath("Broken")
+initial_state = NodePath("Fixed")
 
 [node name="Fixed" type="Node" parent="StateMachine"]
 script = ExtResource("2_cfkvm")
@@ -41,7 +44,7 @@ platform = NodePath("../..")
 collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-position = Vector2(105, 9.5)
+position = Vector2(109, 12)
 shape = SubResource("RectangleShape2D_wrb8n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -49,4 +52,4 @@ position = Vector2(107, 21)
 shape = SubResource("RectangleShape2D_2jrx7")
 
 [connection signal="timeout" from="StateMachine/Breaking/Timer" to="StateMachine/Breaking" method="_on_timer_timeout"]
-[connection signal="area_entered" from="Hitbox" to="StateMachine/Fixed" method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Hitbox" to="StateMachine/Fixed" method="_on_hitbox_body_entered"]
