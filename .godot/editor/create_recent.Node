@@ -1,9 +1,0 @@
-Entity
-AnimationPlayer
-Sprite2D
-StateMachine
-CollisionShape2D
-CharacterBody2D
-Node2D
-State
-AnimationTree
