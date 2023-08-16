@@ -1,11 +1,3 @@
-res://scenes/Player.tscn
-res://scenes/Player.gd
-res://scripts/StateMachine.gd
-res://scenes/State.tscn
-res://scripts/State.gd
-res://scenes/StateMachine.tscn
-res://scenes/Idle.tscn
-res://scripts/Idle.gd
-res://scripts/Player.gd
-res://Entity.tscn
-res://Entity.gd
+res://scripts/states/player/Idle.gd
+res://scenes/prefabs/Player.tscn
+res://scenes/Test.tscn

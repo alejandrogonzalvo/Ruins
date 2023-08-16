@@ -1,31 +1,37 @@
-extends Node2D
+extends Node
 class_name StateMachine
 
+@export var initial_state: State
 var current_state: State
-var transitions: Array[Transition]
+var states: Dictionary = {}
 
 func _ready():
-	pass
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	current_state.process_action.call()
+	for child in get_children():
+		if child is State:
+			states[child.name.to_lower()] = child
+			child.transition.connect(on_state_transition)
 	
-	for transition in transitions:
-		if transition.initial_state != current_state:
-			continue
+	if initial_state:
+		current_state = initial_state
 		
-		if transition.check():
-			change_state(transition.final_state)
+func _process(delta):
+	if current_state:
+		current_state.process(delta)
 
+func _physics_process(delta):
+	if current_state:
+		current_state.physics_process(delta)
 
-func change_state(state: State) -> void:
-	current_state.exit_action.call()
-	current_state = state
-	current_state.enter_action.call()
-
-func add_state() -> void:
-	pass
+func on_state_transition(state: State, new_state_name: String):
+	if state != current_state:
+		print_debug("invalid state transition: state (\"%s\") is not the current state (\"%s\")" % state % current_state)
+		return
 	
-func add_transition(initial_state: State, final_state: State, transition_function) -> void :
-	transitions.append(Transition.new(initial_state, final_state, transition_function))
+	var new_state: State = states.get(new_state_name.to_lower())
+	if !new_state:
+		print_debug("invalid state transition: target state not found (\"%s\" -> \"%s\")" % state % new_state_name)
+		return
+		
+	current_state.exit()
+	current_state = new_state
+	current_state.enter()
