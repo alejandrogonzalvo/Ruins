@@ -8,16 +8,33 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "State",
+"language": "GDScript",
+"path": "res://scripts/State.gd"
+}, {
+"base": "Node2D",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://scripts/StateMachine.gd"
+}, {
+"base": "Node2D",
+"class": "Transition",
+"language": "GDScript",
+"path": "res://scripts/Transition.gd"
+} ]
 _global_script_class_icons={
-
+"State": "",
+"StateMachine": "",
+"Transition": ""
 }
 
 [application]
 
 config/name="Ruins"
-config/icon="res://icon.png"
+config/icon="res://assets/icon.png"
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://assets/default_env.tres"
