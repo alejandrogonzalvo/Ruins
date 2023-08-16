@@ -23,15 +23,18 @@ func _physics_process(delta):
 		current_state.physics_process(delta)
 
 func on_state_transition(state: State, new_state_name: String):
+	print_debug("change state from (%s) to (%s)" % [state, new_state_name])
 	if state != current_state:
-		print_debug("invalid state transition: state (\"%s\") is not the current state (\"%s\")" % state % current_state)
+		print_debug("invalid state transition: state (\"%s\") is not the current state (\"%s\")" % [state, current_state])
 		return
 	
 	var new_state: State = states.get(new_state_name.to_lower())
 	if !new_state:
-		print_debug("invalid state transition: target state not found (\"%s\" -> \"%s\")" % state % new_state_name)
+		print_debug("invalid state transition: target state not found (\"%s\" -> \"%s\")" % [state, new_state_name])
 		return
-		
-	current_state.exit()
+	
+	if current_state:
+		current_state.exit()
+	
 	current_state = new_state
 	current_state.enter()
