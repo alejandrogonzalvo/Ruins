@@ -8,10 +8,10 @@ func process(_delta: float):
 		transition.emit(self, "dashing")
 	elif player.is_on_floor():
 		player.velocity.y = 0
-		if player.velocity.x == 0:
-			transition.emit(self, "idle")
-		elif Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right"):
+		if Input.is_action_pressed("move_left") || Input.is_action_pressed("move_right"):
 			transition.emit(self, "walking")
+		elif player.velocity.x == 0:
+			transition.emit(self, "idle")
 
 
 func physics_process(delta: float):

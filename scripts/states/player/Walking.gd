@@ -6,8 +6,10 @@ class_name PlayerWalking
 func process(_delta):
 	if !player.is_on_floor():
 		transition.emit(self, "falling")
-	elif Input.is_action_pressed("dash"):
+	elif Input.is_action_pressed("dash") && player.dash_ready:
 		transition.emit(self, "dashing")
+	elif Input.is_action_pressed("jump") && player.jump_ready:
+		transition.emit(self, "jumping")
 	elif player.velocity.x == 0:
 		transition.emit(self, "idle")
 
