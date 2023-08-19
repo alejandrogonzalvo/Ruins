@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://dad16cc15doc3"]
 
 [ext_resource type="Texture2D" uid="uid://muad1aaskn3l" path="res://assets/icon.png" id="1_78h2l"]
-[ext_resource type="Script" path="res://scenes/prefabs/Platform.gd" id="1_fvd0l"]
-[ext_resource type="Script" path="res://scripts/StateMachine.gd" id="1_sbqlh"]
+[ext_resource type="Script" path="res://scripts/prefabs/Platform.gd" id="1_fvd0l"]
+[ext_resource type="Script" path="res://scripts/states/StateMachine.gd" id="1_sbqlh"]
 [ext_resource type="Script" path="res://scripts/states/platform/Fixed.gd" id="2_cfkvm"]
-[ext_resource type="Script" path="res://scenes/prefabs/Breaking.gd" id="4_rvgw1"]
-[ext_resource type="Script" path="res://scenes/prefabs/Broken.gd" id="5_q8cir"]
+[ext_resource type="Script" path="res://scripts/states/platform/Breaking.gd" id="4_rvgw1"]
+[ext_resource type="Script" path="res://scripts/states/platform/Broken.gd" id="5_q8cir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrb8n"]
 size = Vector2(284, 7)
