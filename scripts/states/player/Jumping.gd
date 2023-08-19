@@ -1,6 +1,6 @@
 extends PlayerState
 
-class_name Jumping
+class_name PlayerJumping
 
 var current_time: float = 0
 

@@ -2,18 +2,21 @@ extends PlayerState
 
 class_name PlayerWalking
 
-
-func physics_process(_delta):
-	if Input.is_action_pressed("jump"):
-		transition.emit(self, "jumping")
-		return
-		
-	if Input.is_action_pressed("move_left"):
-		player.velocity.x = -player.walking_speed
-	elif Input.is_action_pressed("move_right"):
-		player.velocity.x = player.walking_speed
-	else:
-		player.velocity.x = 0
+func process(_delta):
+	if Input.is_action_pressed("dash"):
+		transition.emit(self, "dashing")
+	elif player.velocity.x == 0:
 		transition.emit(self, "idle")
 	
-	player.move_and_slide()
+
+func physics_process(delta):
+	var target_velocity = player.walk_speed
+	if Input.is_action_pressed("move_left"):
+		player.direction = player.Direction.LEFT
+	elif Input.is_action_pressed("move_right"):
+		player.direction = player.Direction.RIGHT
+	else:
+		target_velocity = 0
+	target_velocity *= player.direction
+	
+	player.update_x_velocity(target_velocity, player.walk_accel, delta)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwsuo8qkwd0fw"]
+[gd_scene load_steps=5 format=3 uid="uid://vwif2fgq7nbi"]
 
 [ext_resource type="Script" path="res://scenes/Level0.gd" id="1_40fym"]
 [ext_resource type="Texture2D" uid="uid://b801mpjw16nho" path="res://assets/Tileset ruins/Background_1.png" id="1_vkni0"]
@@ -17,3 +17,5 @@ layer_0/tile_data = PackedInt32Array(917504, 65536, 4, 917505, 65536, 4, 917506,
 
 [node name="Player" parent="." instance=ExtResource("3_vohna")]
 position = Vector2(119, 183)
+walking_speed = 100.0
+jump_time = 1.0

@@ -19,3 +19,5 @@ texture = ExtResource("2_k5qo2")
 
 [node name="Player" parent="." instance=ExtResource("3_rh3gg")]
 position = Vector2(4, -54)
+walking_speed = 0.0
+jump_time = 0.0

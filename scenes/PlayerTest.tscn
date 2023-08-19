@@ -7,4 +7,3 @@
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Player" parent="." instance=ExtResource("1_aursm")]
-jump_time = 0.5
