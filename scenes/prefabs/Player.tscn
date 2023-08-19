@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://5tcjju0i4xrq"]
+[gd_scene load_steps=9 format=3 uid="uid://5tcjju0i4xrq"]
 
 [ext_resource type="Script" path="res://scripts/prefabs/Player.gd" id="1_d7f85"]
 [ext_resource type="Script" path="res://scripts/states/StateMachine.gd" id="2_bd32p"]
 [ext_resource type="Script" path="res://scripts/states/player/Idle.gd" id="3_mp2ie"]
 [ext_resource type="Script" path="res://scripts/states/player/Walking.gd" id="4_r286j"]
 [ext_resource type="Script" path="res://scripts/states/player/Dashing.gd" id="5_sle54"]
+[ext_resource type="Script" path="res://scripts/states/player/Falling.gd" id="6_7p8gy"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_5ca6l"]
 
@@ -32,6 +33,10 @@ player = NodePath("../..")
 
 [node name="Dashing" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("5_sle54")
+player = NodePath("../..")
+
+[node name="Falling" type="Node" parent="StateMachine" node_paths=PackedStringArray("player")]
+script = ExtResource("6_7p8gy")
 player = NodePath("../..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

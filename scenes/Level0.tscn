@@ -1,12 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://vwif2fgq7nbi"]
+[gd_scene load_steps=4 format=3 uid="uid://vwif2fgq7nbi"]
 
-[ext_resource type="Script" path="res://scripts/scenes/Level0.gd" id="1_tpml8"]
 [ext_resource type="Texture2D" uid="uid://b801mpjw16nho" path="res://assets/Tileset ruins/Background_1.png" id="1_vkni0"]
 [ext_resource type="PackedScene" uid="uid://smac1mnfjjjx" path="res://assets/Tileset ruins/ruinsTilemap.tscn" id="2_vsqlb"]
 [ext_resource type="PackedScene" uid="uid://5tcjju0i4xrq" path="res://scenes/prefabs/Player.tscn" id="3_vohna"]
 
 [node name="Level0" type="Node2D"]
-script = ExtResource("1_tpml8")
 
 [node name="Background1" type="Sprite2D" parent="."]
 position = Vector2(249, 138)
@@ -16,4 +14,8 @@ texture = ExtResource("1_vkni0")
 layer_0/tile_data = PackedInt32Array(917504, 65536, 4, 917505, 65536, 4, 917506, 65536, 4, 917507, 65536, 4, 917508, 65536, 4, 917509, 65536, 4, 917510, 65536, 4, 917511, 65536, 4, 917512, 65536, 4, 917513, 65536, 4, 917514, 65536, 4, 917515, 65536, 4, 917516, 65536, 4, 917517, 65536, 4, 917518, 65536, 4, 917519, 65536, 4, 917520, 65536, 4, 917521, 65536, 4, 917522, 65536, 4, 917523, 65536, 4, 917524, 65536, 4, 917525, 65536, 4, 917526, 65536, 4, 917527, 65536, 4, 917528, 65536, 4, 917529, 65536, 4, 917530, 65536, 4, 917531, 65536, 4, 917532, 65536, 4, 917533, 65536, 4, 917534, 65536, 4, 786437, 0, 9, 786438, 65536, 9, 786439, 131072, 9, 786440, 196608, 9, 786455, 0, 9, 786456, 65536, 9, 786457, 131072, 9, 786458, 196608, 9, 655370, 0, 9, 655371, 65536, 9, 655372, 131072, 9, 655373, 196608, 9, 655378, 0, 9, 655379, 65536, 9, 655380, 131072, 9, 655381, 196608, 9)
 
 [node name="Player" parent="." instance=ExtResource("3_vohna")]
-position = Vector2(119, 183)
+position = Vector2(247, 24)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(249, 138)
+zoom = Vector2(2.4, 2.4)
